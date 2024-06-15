@@ -3,7 +3,10 @@
 <head>
 	<meta charset="utf-8" />
 	<title>《願榮光歸香港》進行曲版   《Glory to Hong Kong》March Edition</title>
-	<link rel="shortcut icon" href="../../icons.png">
+    <link rel="shortcut icon" href="../../icons.png">
+	<link href="https://cdn.bootcss.com/video.js/7.0.0-alpha.1/alt/video-js-cdn.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/video.js/7.0.0-alpha.1/video.min.js"></script>
+	<script src="https://cdn.flowplayer.com/players/ffdf2c44-aa29-4df8-a270-3a199a1b119e/native/flowplayer.async.js"></script>
 	<style type="text/css">
 		body{
 			background-color: rgb(65, 48, 1);
@@ -196,6 +199,9 @@
 			div2.innerHTML=window.a[i*2-1];			//a数组每两个元素存放一个视频的信息（作者、视频名），所以这里同i*2-1即可找到视频名(i从1开始，下标从0开始)
 			window.div.appendChild(div2);
 		}
+		const player2 = flowplayer("#player2",
+  		{ src: "https://thumbsnap.com/i/H8iHe7Hm.mp4"
+  		})
 	</script>
 	
 </head>
@@ -211,7 +217,8 @@
 	</div>
 	
 	<div id="player">
-		<video id="video" src="https://thumbsnap.com/i/H8iHe7Hm.mp4" controls autoplay></video>
+		<!--<video id="video" class="video-js vjs-big-play-centered" src="https://thumbsnap.com/i/H8iHe7Hm.mp4" controls autoplay></video>-->
+		<br><div id="player2"></div>
 		<div id="name">《願榮光歸香港》進行曲版   《Glory to Hong Kong》March Edition</div>
 	</div>
 	
